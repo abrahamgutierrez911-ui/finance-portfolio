@@ -1,34 +1,44 @@
-# Automatización de reportes financieros
+# AutomaTES | Automatización de reportes financieros
 
-## Problema
+## Problema profesional
 
 La preparación manual de múltiples reportes financieros requería consolidar archivos con estructuras diferentes, validar cifras y generar entregables separados. El ciclo completo podía tomar entre una y dos semanas.
 
-## Solución pública reconstruida
+## Reconstrucción pública
 
-Este proyecto reproduce el tipo de reto con información totalmente sintética:
+La versión publicada reproduce el tipo de reto sin utilizar archivos, formatos ni reglas confidenciales:
 
 1. Genera estados financieros, pasivos, cartera, vencimientos y movimientos bancarios ficticios.
-2. Limpia, homologa y valida fechas, montos, columnas y categorías.
-3. Construye Estados Financieros Base y Maestro de Pasivos Base.
-4. Calcula una Brecha de Liquidez demostrativa por periodos.
-5. Consolida el Reporte de Cartera y valida trazabilidad contra sus bases origen.
-6. Genera tres reportes para cada uno de 13 fondeadores: resumen, vencimientos y flujo.
-7. Exporta 39 archivos Excel y una bitácora de ejecución.
+2. Valida columnas, tipos de datos y disponibilidad de archivos.
+3. Limpia y homologa conceptos, fechas, montos y categorías.
+4. Construye cinco entregables principales.
+5. Genera tres reportes para cada uno de 13 fondeadores ficticios.
+6. Registra cada etapa en una bitácora.
+7. Permite revisar las tablas y descargar 45 archivos en un ZIP: cinco entregables, 39 reportes y una bitácora.
+
+## Cómo verlo
+
+```bash
+streamlit run automates_app.py
+```
+
+La interfaz muestra:
+
+- Estados Financieros Base.
+- Maestro de Pasivos Base.
+- Reporte de Cartera.
+- Brecha de Liquidez.
+- Validación de trazabilidad.
+- Bitácora y descarga de resultados.
 
 ## Resultado profesional relacionado
 
-La solución original y el dashboard asociado redujeron aproximadamente 75% el tiempo dedicado a las actividades, llevando el procesamiento total de una o dos semanas a dos o tres días.
+La solución original y el dashboard asociado redujeron aproximadamente 75% el tiempo destinado a estas actividades, llevando el procesamiento total de una o dos semanas a dos o tres días.
 
 ## Tecnologías
 
-- Python
-- pandas
-- NumPy
-- openpyxl
-- Excel
-- Validación de datos y ETL
+Python, pandas, NumPy, openpyxl, Excel, Streamlit, validación de datos, ETL, pruebas y generación de bitácoras.
 
-## Privacidad
+## Límites de privacidad
 
-El código fue reescrito específicamente para este portafolio. Los nombres, montos, fechas y reglas son ficticios y no reproducen archivos, plantillas, metodologías ni lógica confidencial de ninguna empresa.
+El código fue reescrito para el portafolio. No reproduce interfaces, plantillas, nombres, formatos, cifras, reglas, rutas o lógica interna de ningún empleador.

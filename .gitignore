@@ -1,8 +1,11 @@
 .venv/
 __pycache__/
+.pytest_cache/
+.ruff_cache/
 *.py[cod]
 .env
 .env.*
+.streamlit/secrets.toml
 *.log
 data/raw/
 data/private/
@@ -13,6 +16,7 @@ output/
 *.xlsm
 *.pdf
 *.docx
+*.zip
 *.pem
 *.key
 credentials*.json

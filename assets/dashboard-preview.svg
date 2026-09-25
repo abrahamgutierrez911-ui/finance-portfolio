@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#f7f4f9"/>
+  <rect x="0" y="0" width="220" height="675" fill="#351b4b"/>
+  <text x="36" y="70" fill="#ffffff" font-family="Arial" font-size="28" font-weight="700">Portafolio</text>
+  <text x="36" y="125" fill="#d9cbe3" font-family="Arial" font-size="18">Inicio</text>
+  <text x="36" y="170" fill="#d9cbe3" font-family="Arial" font-size="18">AutomaTES</text>
+  <rect x="20" y="195" width="180" height="46" rx="10" fill="#5f3a78"/>
+  <text x="36" y="225" fill="#ffffff" font-family="Arial" font-size="18" font-weight="700">Dashboard</text>
+  <text x="260" y="62" fill="#26152f" font-family="Arial" font-size="31" font-weight="700">Dashboard de Tesorería y Fondeo</text>
+  <text x="260" y="94" fill="#6f6574" font-family="Arial" font-size="16">Datos 100% sintéticos</text>
+  <g font-family="Arial">
+    <rect x="260" y="125" width="205" height="90" rx="12" fill="#ffffff" stroke="#ded6e3"/>
+    <text x="280" y="155" fill="#6f6574" font-size="15">Entradas</text><text x="280" y="193" fill="#26152f" font-size="27" font-weight="700">$281.7 M</text>
+    <rect x="485" y="125" width="205" height="90" rx="12" fill="#ffffff" stroke="#ded6e3"/>
+    <text x="505" y="155" fill="#6f6574" font-size="15">Salidas</text><text x="505" y="193" fill="#26152f" font-size="27" font-weight="700">$226.9 M</text>
+    <rect x="710" y="125" width="205" height="90" rx="12" fill="#ffffff" stroke="#ded6e3"/>
+    <text x="730" y="155" fill="#6f6574" font-size="15">Flujo neto</text><text x="730" y="193" fill="#2f8f9d" font-size="27" font-weight="700">$54.8 M</text>
+    <rect x="935" y="125" width="205" height="90" rx="12" fill="#ffffff" stroke="#ded6e3"/>
+    <text x="955" y="155" fill="#6f6574" font-size="15">Posición final</text><text x="955" y="193" fill="#4b286d" font-size="27" font-weight="700">$14.1 M</text>
+  </g>
+  <rect x="260" y="245" width="880" height="370" rx="14" fill="#ffffff" stroke="#ded6e3"/>
+  <text x="290" y="285" fill="#26152f" font-family="Arial" font-size="20" font-weight="700">Flujo neto diario</text>
+  <line x1="305" y1="560" x2="1095" y2="560" stroke="#d7cedd"/>
+  <line x1="305" y1="330" x2="305" y2="560" stroke="#d7cedd"/>
+  <polyline points="305,490 370,450 435,500 500,410 565,430 630,365 695,405 760,335 825,390 890,350 955,300 1020,345 1095,285" fill="none" stroke="#4b286d" stroke-width="5"/>
+  <polyline points="305,560 305,490 370,450 435,500 500,410 565,430 630,365 695,405 760,335 825,390 890,350 955,300 1020,345 1095,285 1095,560" fill="#eadff0" opacity="0.8"/>
+  <text x="260" y="650" fill="#746a79" font-family="Arial" font-size="14">Vista previa ilustrativa generada exclusivamente con datos sintéticos.</text>
+</svg>

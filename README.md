@@ -2,76 +2,132 @@
 
 ## Analista de Datos | Business Intelligence | Tesorería
 
-Economista egresado con experiencia en automatización de reportes financieros, análisis de datos, procesos ETL y dashboards. Trabajo con Python, pandas, SQL, Power BI, Excel avanzado y Odoo ERP para transformar procesos manuales en soluciones reproducibles y trazables.
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Demo-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Pruebas](https://github.com/abrahamgutierrez911-ui/finance-portfolio/actions/workflows/tests.yml/badge.svg)](https://github.com/abrahamgutierrez911-ui/finance-portfolio/actions/workflows/tests.yml)
+[![Privacidad](https://img.shields.io/badge/datos-100%25%20sintéticos-4B286D)](PRIVACY_CHECKLIST.md)
 
-> Portafolio basado en proyectos desarrollados profesionalmente. Las versiones públicas fueron reconstruidas desde cero con datos sintéticos y lógica demostrativa: no contienen bases, clientes, cuentas, contratos, saldos, documentos ni código interno de ningún empleador.
+Economista egresado con experiencia en automatización de reportes financieros, análisis de datos, procesos ETL y dashboards. Este repositorio presenta reconstrucciones públicas de dos proyectos profesionales mediante datos y entidades completamente ficticios.
 
-## Resultados destacados
+> No contiene bases, clientes, cuentas, contratos, saldos, documentos, plantillas ni código interno de ningún empleador.
 
-- Automatización aproximada de 39 reportes financieros: un promedio de tres reportes para cada uno de 13 fondeadores.
-- Reducción del procesamiento total de una o dos semanas a dos o tres días.
-- Reducción aproximada del 75% en el tiempo dedicado a transformación de datos, generación de reportes y consulta de información.
-- Centralización de posición y flujo bancario mediante dashboards e indicadores financieros.
+## Resultados profesionales relacionados
 
-## Proyectos
+- Aproximadamente **39 reportes financieros**, tres para cada uno de 13 fondeadores.
+- Reducción del ciclo de procesamiento de **una o dos semanas a dos o tres días**.
+- Reducción aproximada de **75% del tiempo de trabajo** destinado a transformación, reportería y consulta.
+- Centralización de posición, flujo bancario, liquidez, pasivos y cartera.
 
-### 1. AutomaTES - Automatización de reportes financieros
+## Demostraciones
 
-Caso de estudio derivado de un proyecto real de Tesorería y Fondeo. La reconstrucción pública procesa estados financieros, pasivos, cartera, vencimientos y flujos; valida trazabilidad y genera información ficticia para 13 fondeadores con tres entregables por cada uno.
+### AutomaTES
 
-**Tecnologías:** Python, pandas, openpyxl, Excel y procesos ETL.
+![Vista previa de AutomaTES](assets/automates-preview.svg)
 
-**Demuestra:**
+Ejecuta un pipeline reproducible que genera:
 
 - Estados Financieros Base.
 - Maestro de Pasivos Base.
-- Brecha de Liquidez.
 - Reporte de Cartera.
-- Comparativo de Trazabilidad.
-- Reporterías por fondeador.
-- Validación, bitácoras y exportación a Excel.
+- Brecha de Liquidez.
+- Comparativo de trazabilidad.
+- Bitácora de ejecución.
+- 39 reportes Excel para 13 fondeadores ficticios.
+- ZIP descargable con todos los resultados sintéticos.
 
-[Consultar el caso de estudio](projects/automatizacion-reportes/README.md)
+[Leer el caso de estudio](projects/automatizacion-reportes/README.md)
 
-### 2. Dashboard de posición, flujo bancario y liquidez
+### Dashboard de Tesorería y Fondeo
 
-Dashboard demostrativo basado en el proyecto profesional para visualizar saldos, entradas, salidas, flujo neto, posición bancaria, estructura de pasivos, cartera y brecha de liquidez.
+![Vista previa del dashboard](assets/dashboard-preview.svg)
 
-**Tecnologías:** Python, pandas, Streamlit y Plotly.
+Incluye cuatro vistas interactivas:
 
-**Demuestra:**
+- Posición bancaria y flujo neto diario.
+- Brecha de liquidez por horizonte.
+- Concentración de pasivos por fondeador.
+- Cartera por producto y estatus.
 
-- Preparación y agregación de datos.
-- Indicadores de liquidez y flujo.
-- Visualización centralizada.
-- Filtros por fecha y banco.
+[Leer el caso de estudio](projects/dashboard-posicion-flujo/README.md)
 
-[Consultar el caso de estudio](projects/dashboard-posicion-flujo/README.md)
+## Ejecución rápida
 
-## Habilidades
+### Windows
 
-- **Python:** pandas, NumPy, openpyxl, xlrd, Matplotlib, Seaborn y Jupyter Notebook.
-- **SQL:** SELECT, WHERE, GROUP BY, HAVING, ORDER BY, agregaciones y JOINs.
-- **Power BI:** Power Query, modelado de datos, DAX intermedio, inteligencia de tiempo y dashboards.
-- **Excel:** tablas dinámicas, fórmulas avanzadas, Power Query, macros y VBA.
-- **Finanzas:** posición y flujo bancario, liquidez, cartera, pasivos, fondeo, conciliación y análisis financiero.
-- **ERP:** Odoo en módulos de Contabilidad, Finanzas, CRM, Ventas y Compras.
+Ejecuta `ejecutar_demo.bat` o utiliza PowerShell:
 
-## Ejecución local
+```powershell
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+### macOS o Linux
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # En Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+La aplicación genera toda la información ficticia en memoria. No necesita descargar bases ni ejecutar preparaciones manuales.
+
+## Pipeline desde terminal
+
+```bash
 python scripts/generar_datos_sinteticos.py
 python scripts/ejecutar_pipeline.py
-streamlit run dashboard/app.py
 ```
+
+Los resultados se crean localmente en `output/`, carpeta excluida del repositorio.
+
+## Arquitectura
+
+```mermaid
+flowchart TD
+    A[Generador sintético] --> B[Validación y homologación]
+    B --> C[Estados, pasivos y cartera]
+    C --> D[Brecha y trazabilidad]
+    D --> E[39 reportes Excel]
+    C --> F[Dashboard Streamlit]
+    D --> G[Bitácora y ZIP]
+```
+
+## Estructura principal
+
+```text
+streamlit_app.py            Aplicación unificada del portafolio
+automates_app.py            Demo independiente de AutomaTES
+dashboard/app.py            Dashboard independiente
+src/automates/core.py       Transformaciones y validaciones
+src/automates/demo_data.py  Generador de datos ficticios
+src/automates/pipeline.py   Orquestación, exportación y bitácora
+src/automates/ui.py         Interfaces Streamlit
+tests/                      Pruebas funcionales y de privacidad
+```
+
+## Pruebas
+
+```bash
+python -m pytest -q
+```
+
+GitHub Actions ejecuta las pruebas en cada cambio de la rama principal.
+
+## Tecnologías demostradas
+
+- Python, pandas, NumPy, openpyxl y procesos ETL.
+- Streamlit y Plotly para interfaces y visualización.
+- Excel avanzado, Power Query, Power BI y SQL como experiencia complementaria.
+- Validación, trazabilidad, bitácoras, pruebas y automatización de reportería.
+- Análisis de posición bancaria, liquidez, cartera, pasivos y fondeo.
 
 ## Privacidad
 
-Antes de publicar una actualización, revisar [PRIVACY_CHECKLIST.md](PRIVACY_CHECKLIST.md). Los nombres, montos y entidades del demo son ficticios y no deben sustituirse por información laboral real.
+Consulta [PRIVACY_CHECKLIST.md](PRIVACY_CHECKLIST.md) y [SECURITY.md](SECURITY.md). Las reglas públicas son representativas y no reproducen contratos, metodologías, formatos ni procesos confidenciales de terceros.
 
-## Alcance público
+## Licencia
 
-El objetivo de este repositorio es demostrar arquitectura, transformación de datos, validaciones y visualización. Las reglas financieras son representativas y no reproducen contratos, formatos ni metodologías internas de terceros.
+[MIT](LICENSE) para el código demostrativo creado específicamente para este portafolio.

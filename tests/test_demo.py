@@ -25,9 +25,14 @@ def test_pipeline_completo_genera_entregables_y_bitacora(tmp_path: Path) -> None
 
     assert resultado["cantidad_reportes"] == 39
     assert len(list((salida / "reportes_fondeadores").glob("*.xlsx"))) == 39
-    assert len(list(salida.glob("*.xlsx"))) == 5
+    assert len(list(salida.glob("*.xlsx"))) == 11
+    assert len([archivo for archivo in salida.rglob("*") if archivo.is_file()]) == 52
     assert (salida / "bitacora_ejecucion.csv").exists()
+    assert (salida / "manifiesto_archivos.csv").exists()
+    assert len(resultado["manifiesto"]) == 50
+    assert resultado["manifiesto"]["sha256"].str.fullmatch(r"[0-9a-f]{64}").all()
     assert set(resultado["bitacora"]["estado"]) == {"Correcto"}
+    assert len(resultado["tablas"]["matriz_controles.xlsx"]) == 8
 
 
 def test_datos_no_contienen_entidades_reales() -> None:
@@ -39,3 +44,5 @@ def test_datos_no_contienen_entidades_reales() -> None:
     assert posiciones["fondeador"].str.match(r"Fondeador Demo \d{2}").all()
     assert pasivos["fondeador"].str.match(r"Fondeador Demo \d{2}").all()
     assert cartera["cliente"].str.match(r"Cliente Demo \d{3}").all()
+    assert datasets["indicadores_economicos.csv"]["es_simulado"].all()
+    assert datasets["posicion_flujo.csv"]["cuenta_demo"].str.startswith("CTA-DEMO-").all()

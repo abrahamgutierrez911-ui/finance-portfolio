@@ -24,16 +24,21 @@ Economista egresado con experiencia en automatización de reportes financieros, 
 
 ![Vista previa de AutomaTES](assets/automates-preview.svg)
 
-Ejecuta un pipeline reproducible que genera:
+Ejecuta un pipeline reproducible que integra siete fuentes sintéticas y genera:
 
 - Estados Financieros Base.
 - Maestro de Pasivos Base.
 - Reporte de Cartera.
 - Brecha de Liquidez.
 - Comparativo de trazabilidad.
+- Conciliación contra cifras reportadas y tolerancias.
+- Matriz de ocho controles de calidad, cálculo y límites.
+- Calendario de vencimientos, uso de líneas y seguimiento de covenants.
+- Resumen ejecutivo.
 - Bitácora de ejecución.
 - 39 reportes Excel para 13 fondeadores ficticios.
-- ZIP descargable con todos los resultados sintéticos.
+- Manifiesto de integridad con tamaño y huella SHA-256 de cada Excel.
+- ZIP descargable con **52 archivos sintéticos**.
 
 [Leer el caso de estudio](projects/automatizacion-reportes/README.md)
 
@@ -41,12 +46,14 @@ Ejecuta un pipeline reproducible que genera:
 
 ![Vista previa del dashboard](assets/dashboard-preview.svg)
 
-Incluye cuatro vistas interactivas:
+Incluye seis módulos interactivos:
 
-- Posición bancaria y flujo neto diario.
-- Brecha de liquidez por horizonte.
-- Concentración de pasivos por fondeador.
-- Cartera por producto y estatus.
+- Centro de reportes y ejecución del proceso ETL.
+- Posición bancaria por empresa, banco, moneda y categoría.
+- Históricos simulados de tipo de cambio y tasas.
+- Vencimientos y brecha de liquidez por horizonte.
+- Utilización de líneas y seguimiento de covenants.
+- Control, conciliación y trazabilidad de punta a punta.
 
 [Leer el caso de estudio](projects/dashboard-posicion-flujo/README.md)
 
@@ -87,12 +94,12 @@ Los resultados se crean localmente en `output/`, carpeta excluida del repositori
 
 ```mermaid
 flowchart TD
-    A[Generador sintético] --> B[Validación y homologación]
-    B --> C[Estados, pasivos y cartera]
-    C --> D[Brecha y trazabilidad]
-    D --> E[39 reportes Excel]
-    C --> F[Dashboard Streamlit]
-    D --> G[Bitácora y ZIP]
+    A[Siete fuentes sintéticas] --> B[Validación y homologación]
+    B --> C[Cálculos financieros]
+    C --> D[Controles y conciliación]
+    D --> E[11 entregables y 39 reportes]
+    C --> F[Seis módulos Streamlit]
+    D --> G[Bitácora, manifiesto y ZIP de 52 archivos]
 ```
 
 ## Estructura principal
@@ -102,6 +109,7 @@ streamlit_app.py            Aplicación unificada del portafolio
 automates_app.py            Demo independiente de AutomaTES
 dashboard/app.py            Dashboard independiente
 src/automates/core.py       Transformaciones y validaciones
+src/automates/controls.py   Conciliación, vencimientos, líneas y controles
 src/automates/demo_data.py  Generador de datos ficticios
 src/automates/pipeline.py   Orquestación, exportación y bitácora
 src/automates/ui.py         Interfaces Streamlit

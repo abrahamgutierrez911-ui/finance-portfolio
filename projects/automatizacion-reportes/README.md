@@ -11,10 +11,10 @@ La versión publicada reproduce el tipo de reto sin utilizar archivos, formatos 
 1. Genera estados financieros, pasivos, cartera, vencimientos y movimientos bancarios ficticios.
 2. Valida columnas, tipos de datos y disponibilidad de archivos.
 3. Limpia y homologa conceptos, fechas, montos y categorías.
-4. Construye cinco entregables principales.
+4. Construye once entregables principales, incluidos controles y conciliaciones.
 5. Genera tres reportes para cada uno de 13 fondeadores ficticios.
 6. Registra cada etapa en una bitácora.
-7. Permite revisar las tablas y descargar 45 archivos en un ZIP: cinco entregables, 39 reportes y una bitácora.
+7. Permite revisar las tablas y descargar 52 archivos en un ZIP: once entregables, 39 reportes, una bitácora y un manifiesto de integridad.
 
 ## Cómo verlo
 
@@ -29,7 +29,13 @@ La interfaz muestra:
 - Reporte de Cartera.
 - Brecha de Liquidez.
 - Validación de trazabilidad.
-- Bitácora y descarga de resultados.
+- Conciliación contra cifras reportadas y tolerancias.
+- Matriz de controles de integridad, calidad, cálculo, límites y riesgo.
+- Calendario de vencimientos, utilización de líneas y covenants.
+- Resumen ejecutivo.
+- Bitácora con identificador de ejecución y duración acumulada.
+- Manifiesto con tamaño y huella SHA-256 de cada Excel.
+- Descarga del paquete completo de resultados.
 
 ## Resultado profesional relacionado
 

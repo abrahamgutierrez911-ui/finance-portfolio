@@ -12,12 +12,14 @@ streamlit run dashboard/app.py
 
 No requiere bases externas: los datos se crean en memoria a partir del generador sintético del repositorio.
 
-## Vistas interactivas
+## Módulos interactivos
 
-- **Posición bancaria:** entradas, salidas, flujo neto, saldo final y filtro por banco.
-- **Brecha de liquidez:** activos, pasivos, brecha y acumulado por horizonte.
-- **Pasivos:** capital, intereses, total, disponibilidad y utilización de línea.
-- **Cartera:** producto, estatus, saldo, atraso y garantía ficticia.
+- **Centro de reportes:** insumos, pasos, entregables, controles, conciliación y bitácora.
+- **Posición bancaria:** entradas, salidas, flujo neto y filtros por empresa, banco, moneda y categoría.
+- **Indicadores económicos:** históricos offline simulados de tipo de cambio y tasas.
+- **Vencimientos:** compromisos por horizonte y moneda, más brecha de liquidez.
+- **Fondeo y covenants:** utilización de líneas, disponibilidad y seguimiento de reglas.
+- **Control y trazabilidad:** excepciones documentadas y linaje de los resultados.
 
 ## Tecnologías
 
